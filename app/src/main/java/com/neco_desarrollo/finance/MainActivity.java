@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "MyApp";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +20,11 @@ public class MainActivity extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText( context, text,Toast.LENGTH_LONG );
         toast.show();
+        Log.i(TAG, "Это мое информация для записи в журнале");
+        Log.w(TAG, "Это мое предупреждения для записи в журнале");
+        Log.d(TAG, "Это мое отладка для записи в журнале");
+        Log.v(TAG, "Это мое подробности для записи в журнале");
+        Log.e(TAG, "Это мое onCreate error для записи в журнале");
 
     }
     @Override
@@ -28,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
+        Log.i(TAG, "Это мое информация для записи в журнале");
+        Log.w(TAG, "Это мое предупреждения для записи в журнале");
+        Log.d(TAG, "Это мое отладка для записи в журнале");
+        Log.v(TAG, "Это мое подробности для записи в журнале");
+        Log.e(TAG, "Это мое onStart error для записи в журнале");
     }
     @Override
     protected void onStop() {
@@ -37,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
+        Log.i(TAG, "Это мое информация для записи в журнале");
+        Log.w(TAG, "Это мое предупреждения для записи в журнале");
+        Log.d(TAG, "Это мое отладка для записи в журнале");
+        Log.v(TAG, "Это мое подробности для записи в журнале");
+        Log.e(TAG, "Это мое onStop error для записи в журнале");
     }
     @Override
     protected void onDestroy() {
@@ -46,6 +63,11 @@ public class MainActivity extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
+        Log.i(TAG, "Это мое информация для записи в журнале");
+        Log.w(TAG, "Это мое предупреждения для записи в журнале");
+        Log.d(TAG, "Это мое отладка для записи в журнале");
+        Log.v(TAG, "Это мое подробности для записи в журнале");
+        Log.e(TAG, "Это мое onDestroy error для записи в журнале");
     }
     @Override
     protected void onPause() {
@@ -55,6 +77,11 @@ public class MainActivity extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
+        Log.i(TAG, "Это мое информация для записи в журнале");
+        Log.w(TAG, "Это мое предупреждения для записи в журнале");
+        Log.d(TAG, "Это мое отладка для записи в журнале");
+        Log.v(TAG, "Это мое подробности для записи в журнале");
+        Log.e(TAG, "Это мое onPause error для записи в журнале");
     }
     @Override
     protected void onResume() {
@@ -64,5 +91,10 @@ public class MainActivity extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
+        Log.i(TAG, "Это мое информация для записи в журнале");
+        Log.w(TAG, "Это мое предупреждения для записи в журнале");
+        Log.d(TAG, "Это мое отладка для записи в журнале");
+        Log.v(TAG, "Это мое подробности для записи в журнале");
+        Log.e(TAG, "Это мое onResume error для записи в журнале");
     }
 }
